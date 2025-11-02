@@ -30,6 +30,7 @@ public class DictionaryOfManyTranslations {
         return dictionary.getOrDefault(word, new ArrayList<>());
     }
     
+    
     public void remove(String word){
         dictionary.remove(word);
     }
