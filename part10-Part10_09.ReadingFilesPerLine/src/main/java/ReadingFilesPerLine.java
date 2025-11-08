@@ -10,8 +10,16 @@ public class ReadingFilesPerLine {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // test the method here
-
+        
     }
-
+    public static List<String> read(String file){
+        List<String> list = new ArrayList<>();
+        
+        try{
+            Files.lines(Paths.get(file)).forEach(row -> list.add(row));
+        }catch (Exception e){
+            System.out.println("Error: " + e.getMessage());
+        }
+        return list;
+    }
 }
