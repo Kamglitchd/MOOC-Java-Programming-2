@@ -1,0 +1,198 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 130023424 bytes for Failed to commit area from 0x0000000084200000 to 0x000000008be00000 of length 130023424.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3391), pid=752, tid=21776
+#
+# JRE version:  (11.0.28+6) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.28+6, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dclassworlds.conf=C:\Program Files\TMCBeans\java\maven\bin\..\bin\m2.conf -Dmaven.home=C:\Program Files\TMCBeans\java\maven\bin\.. -Dlibrary.jansi.path=C:\Program Files\TMCBeans\java\maven\bin\..\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\victo\OneDrive\Documents\NetBeansProjects\mooc-java-programming-ii\part11-Part11_10.FlightControl org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.args=-classpath %classpath FlightControl.Main -Dexec.executable=C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\java.exe -Dfile.encoding=UTF-8 -T=1 -q process-classes org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+
+Host: Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz, 8 cores, 7G,  Windows 11 , 64 bit Build 26100 (10.0.26100.7019)
+Time: Mon Nov 10 22:58:16 2025 Eastern Standard Time elapsed time: 1.131223 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000198286af000):  JavaThread "Unknown thread" [_thread_in_vm, id=21776, stack(0x00000021ea600000,0x00000021ea700000)]
+
+Stack: [0x00000021ea600000,0x00000021ea700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6448da]
+V  [jvm.dll+0x7d7119]
+V  [jvm.dll+0x7d87f9]
+V  [jvm.dll+0x7d8ef3]
+V  [jvm.dll+0x269105]
+V  [jvm.dll+0x641af9]
+V  [jvm.dll+0x636395]
+V  [jvm.dll+0x32559d]
+V  [jvm.dll+0x325402]
+V  [jvm.dll+0x32a026]
+V  [jvm.dll+0x371020]
+V  [jvm.dll+0x370a92]
+V  [jvm.dll+0x3004c8]
+V  [jvm.dll+0x3015c5]
+V  [jvm.dll+0x7b0647]
+V  [jvm.dll+0x7b1dcf]
+V  [jvm.dll+0x37e319]
+V  [jvm.dll+0x79226f]
+V  [jvm.dll+0x3eebd7]
+V  [jvm.dll+0x3f10d1]
+C  [jli.dll+0x52c0]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0x8c53c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000198264d7c20, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000198286c8000 GCTaskThread "GC Thread#0" [stack: 0x00000021ea700000,0x00000021ea800000] [id=25320]
+  0x00000198286fc000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000021ea800000,0x00000021ea900000] [id=39008]
+  0x00000198286fe000 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000021ea900000,0x00000021eaa00000] [id=15764]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb1fae1327]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000198264d1990] Heap_lock - owner thread: 0x00000198286af000
+
+Heap address: 0x0000000084200000, size: 1982 MB, Compressed Oops mode: Non-zero based: 0x0000000084200000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.015 Loaded shared library C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff634ce0000 - 0x00007ff634cee000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\java.exe
+0x00007ffbe9960000 - 0x00007ffbe9bc8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffbe8740000 - 0x00007ffbe8809000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffbe7170000 - 0x00007ffbe7568000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffbe7020000 - 0x00007ffbe716b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffbddfb0000 - 0x00007ffbddfc7000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\jli.dll
+0x00007ffbb1c00000 - 0x00007ffbb1c1e000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\VCRUNTIME140.dll
+0x00007ffbe8930000 - 0x00007ffbe8af7000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffbe7620000 - 0x00007ffbe7647000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffbe5cc0000 - 0x00007ffbe5f54000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7019_none_3e06ffa0e335b8a8\COMCTL32.dll
+0x00007ffbe7c50000 - 0x00007ffbe7c7b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffbe79f0000 - 0x00007ffbe7a99000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffbe6ab0000 - 0x00007ffbe6bdc000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffbe7570000 - 0x00007ffbe7613000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffbe8b00000 - 0x00007ffbe8b31000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffbdfb60000 - 0x00007ffbdfb6c000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\vcruntime140_1.dll
+0x00007ffba4c30000 - 0x00007ffba4cbd000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\msvcp140.dll
+0x00007ffb1f7d0000 - 0x00007ffb20393000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\server\jvm.dll
+0x00007ffbe93a0000 - 0x00007ffbe9454000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffbe7ba0000 - 0x00007ffbe7c46000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffbe8810000 - 0x00007ffbe8928000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffbe8d20000 - 0x00007ffbe8d94000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffbe7720000 - 0x00007ffbe7728000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffbd2020000 - 0x00007ffbd202b000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffbd5460000 - 0x00007ffbd5495000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffbe4f40000 - 0x00007ffbe4f5b000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffbddfa0000 - 0x00007ffbddfb0000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\verify.dll
+0x00007ffbe6270000 - 0x00007ffbe64b2000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffbe94d0000 - 0x00007ffbe985b000 	C:\WINDOWS\System32\combase.dll
+0x00007ffbe77b0000 - 0x00007ffbe7887000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffbe6160000 - 0x00007ffbe619c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffbe7650000 - 0x00007ffbe76f5000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffba9960000 - 0x00007ffba9988000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\java.dll
+0x00007ffbc5560000 - 0x00007ffbc556a000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\jimage.dll
+0x00007ffbb12a0000 - 0x00007ffbb12b8000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7019_none_3e06ffa0e335b8a8;C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\server
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=C:\Program Files\TMCBeans\java\maven\bin\..\bin\m2.conf -Dmaven.home=C:\Program Files\TMCBeans\java\maven\bin\.. -Dlibrary.jansi.path=C:\Program Files\TMCBeans\java\maven\bin\..\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\victo\OneDrive\Documents\NetBeansProjects\mooc-java-programming-ii\part11-Part11_10.FlightControl 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.args=-classpath %classpath FlightControl.Main -Dexec.executable=C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin\java.exe -Dfile.encoding=UTF-8 -T=1 -q process-classes org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+java_class_path (initial): C:\Program Files\TMCBeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2078277632                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot
+PATH=C:\Program Files\Eclipse Adoptium\jdk-11.0.28.6-hotspot\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\victo\AppData\Local\Microsoft\WindowsApps;
+USERNAME=victo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+TMP=C:\Users\victo\AppData\Local\Temp
+TEMP=C:\Users\victo\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 26100 (10.0.26100.7019)
+OS uptime: 10 days 5:38 hours
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 10 microcode 0xf0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 7926M (664M free)
+TotalPageFile size 32502M (AvailPageFile size 125M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 60M, peak: 184M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.28+6) for windows-amd64 JRE (11.0.28+6), built on Jul 16 2025 11:20:51 by "" with MS VC++ 17.7 (VS2022)
+
+END.
